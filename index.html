@@ -1,43 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mahima Siddheshwar | Bioinformatics Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   </head>
 
-  <body>
-    <header>
-      <h1>Mahima Siddheshwar</h1>
-      <p>Bioinformatics | QC Lab | Data Meets Biology</p>
-    </header>
-
-    <section>
-      <h2>About Me</h2>
-      <p>I’m a recent MS Bioinformatics graduate passionate about turning complex biological data into insights. With hands-on lab experience and computational skills, I bridge the gap between wet-lab and dry-lab science.</p>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Hero Section -->
+    <section class="text-center py-10 bg-white shadow-md">
+      <img src="assets/profile.png" alt="Mahima Siddheshwar" class="w-32 h-32 mx-auto rounded-full shadow-md" />
+      <h1 class="text-3xl font-bold mt-4">Mahima Siddheshwar</h1>
+      <p class="text-lg mt-2 text-purple-600">Bioinformatics Analyst | RNA-seq | ML for Omics</p>
+      <p class="mt-2 text-sm text-gray-600 italic">“Turning complex biological data into actionable insights”</p>
+      <div class="mt-4 space-x-4">
+        <a href="assets/resume.pdf" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Download Resume</a>
+        <a href="https://github.com/MahimaMSiddheshwar" class="text-purple-600 hover:underline">GitHub</a>
+        <a href="https://linkedin.com/in/mahima-m-siddheshwar-98a585196" class="text-purple-600 hover:underline">LinkedIn</a>
+      </div>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Breast Cancer Biomarker Identification</strong><br>
-          Integrated 7 GEO datasets and used ML to predict key biomarkers.
-          <a href="#">View Project</a>
-        </li>
-        <li>
-          <strong>TCGA-BRCA Subtyping using Graph Clustering</strong><br>
-          Spectral & Louvain clustering on RNA-seq data to reveal hidden cancer subtypes.
-          <a href="#">View Project</a>
-        </li>
+    <!-- About Me -->
+    <section class="max-w-4xl mx-auto py-10 px-4">
+      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">About Me</h2>
+      <p>I’m a Master’s student in Bioinformatics at Indiana University with a strong foundation in transcriptomics and multi-omic analysis. My expertise includes RNA-seq, WGCNA, and differential expression analysis, complemented by hands-on coding in R, Python, and workflow automation using HPC systems. My aim is to bridge the gap between data science and biology to drive impactful biomedical research.</p>
+    </section>
+
+    <!-- Projects -->
+    <section class="max-w-4xl mx-auto py-10 px-4">
+      <h2 class="text-2xl font-semibold mb-6 border-b pb-2">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-4 bg-white shadow rounded">
+          <h3 class="text-lg font-bold text-purple-700">COVID-19 vs RSV: RNA-seq + WGCNA</h3>
+          <p class="mt-2 text-sm">Processed 68 RNA-seq samples; identified 3 hub genes (OASL, TXN, RBCK1) linked to COVID-19 severity. Achieved 20% boost in disease classification accuracy.</p>
+          <p class="mt-1 text-xs text-gray-500">Tools: HISAT2, SAMtools, FeatureCounts, R, GEO, WGCNA</p>
+        </div>
+        <div class="p-4 bg-white shadow rounded">
+          <h3 class="text-lg font-bold text-purple-700">RNA-Seq Pipeline Comparison</h3>
+          <p class="mt-2 text-sm">Benchmarked PCA, t-SNE, K-means, HC methods on RNA-seq; determined t-SNE + HC yielded 40% better cluster stability and biological relevance.</p>
+          <p class="mt-1 text-xs text-gray-500">Tools: PCA, t-SNE, K-means, SLURM, R, Python, HPC</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="max-w-4xl mx-auto py-10 px-4">
+      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Skills</h2>
+      <ul class="list-disc pl-6 space-y-1 text-sm">
+        <li><strong>Languages:</strong> Python, R, Bash, SQL</li>
+        <li><strong>Libraries:</strong> DESeq2, ggplot2, Scanpy, scikit-learn, WGCNA</li>
+        <li><strong>Bioinformatics:</strong> RNA-seq, scRNA-seq, GEO, TCGA, GSEA</li>
+        <li><strong>Tools:</strong> FastQC, STAR, HISAT2, FeatureCounts, HPC (SLURM)</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Email: mahimamahabaleshwar@gmail.com</p>
-      <p>GitHub | LinkedIn</p>
+    <!-- Experience -->
+    <section class="max-w-4xl mx-auto py-10 px-4">
+      <h2 class="text-2xl font-semibold mb-4 border-b pb-2">Experience</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-bold">Research Assistant – IU Health Informatics</h3>
+          <ul class="list-disc pl-5 text-sm mt-1">
+            <li>Streamlined 30+ datasets and built SQL pipelines reducing errors by 25%</li>
+            <li>Created Power BI dashboards cutting report time by 40%</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">QC Analyst – Biocon Biologics</h3>
+          <ul class="list-disc pl-5 text-sm mt-1">
+            <li>Processed 500+ samples, improved LIMS data checks by 15%</li>
+            <li>Led SME training for 10+ analysts, boosted onboarding efficiency</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="text-center py-10 bg-purple-50 mt-8">
+      <p class="text-sm">📧 mahimamahabaleshwar@gmail.com</p>
+      <p class="text-sm">🔗 <a href="https://github.com/MahimaMSiddheshwar" class="underline text-purple-700">GitHub</a> | <a href="https://linkedin.com/in/mahima-m-siddheshwar-98a585196" class="underline text-purple-700">LinkedIn</a></p>
     </section>
   </body>
 </html>
